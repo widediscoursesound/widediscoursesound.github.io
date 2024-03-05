@@ -170,6 +170,10 @@
         padding: 3px;
     }
 
+    .par blockquote p {
+        text-indent: 0px;
+    }
+
     section {
         text-align: center;
     }
@@ -399,7 +403,7 @@
       meaningful than this.<br>
       <br><a id=analysis href='javascript:;'>This song is interesting for many reasons. Click here for an analysis.</a>
       <div>
-      <div id="u1" style="opacity: 0; height: 0px; letter-spacing: auto; overflow: hidden; transform:rotate(0deg); color: gold;">
+      <div id="u1" style="opacity: 0; height: 0px; letter-spacing: auto; overflow: hidden; /* transform:rotate(0deg); */ color: gold;">
       <big><b>Analysis of this song</b></big>
       <ul style='text-align: left;'><li>It's very not polarized. Very neutral song. This is a complement.</li>
       <li>Sort of born out of ignorance, but that's fine. That's what this Label is for.</li>
@@ -821,7 +825,39 @@
 <footer><a href=
     "mailto:widediscoursesound@gmail.com">widediscoursesound@gmail.com</a> &bull; <a style='' href="discord://">discord @wdsrecords</a> &bull; <a href='https://www.facebook.com/wdsrecordlabel'>fb</a> &bull; <a href='https://www.linkedin.com/in/wide-discourse-sound-record-label-42288a2b7/'>linkedin</a>
   </footer>
-<script>function toggle(e){const t=(e=document.getElementById(e)).style,n=document.getElementById("analysis"),o=n.style;"0"==t.opacity?(o.color="rgb(127, 127, 200)",t.opacity="1",t.height="1100px",t.color="white",t.letterSpacing="",t.transform=""):(o.color="white",t.opacity="0",t.color="gold",t.height="0px",t.letterSpacing="auto",t.transform="rotate(0deg)",e.blur()),n.scrollIntoView({behavior:"smooth"})}document.addEventListener("DOMContentLoaded",(function(){document.getElementById("analysis").addEventListener("click",(function(e){e.preventDefault(),toggle("u1")})),document.getElementById("top_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("top").scrollIntoView({behavior:"smooth"})})),document.getElementById("plans_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("plans").scrollIntoView({behavior:"smooth"})})),document.getElementById("about_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("about").scrollIntoView({behavior:"smooth"})})),document.getElementById("background_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("about").scrollIntoView({behavior:"smooth"})})),document.getElementById("who_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("who").scrollIntoView({behavior:"smooth"})})),document.getElementById("business_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("business").scrollIntoView({behavior:"smooth"})}))}));const images=document.querySelectorAll("img"),exceptions=[document.getElementById("logo")];images.forEach((e=>{e.addEventListener("click",(function(){exceptions.includes(e)||window.open(e.src,"_blank")}))}))</script>
+<script>
+
+function toggle(e){
+	const estyle=document.getElementById(e).style; const analysis=document.getElementById("analysis"); const analysis_style=analysis.style;
+
+	if ("0"==estyle.opacity) {
+		estyle.color="rgb(127, 127, 200)";
+		estyle.opacity="1";
+		estyle.height="1100px";
+		estyle.color="white";
+		// estyle.letterSpacing="";
+		// estyle.transform="";
+	} else {
+		estyle.color="white";
+		estyle.opacity="0";
+		estyle.color="gold";
+		estyle.height="0px";
+		// estyle.letterSpacing="auto";
+		// estyle.transform="rotate(0deg)";
+	}
+
+	analysis.blur();
+	analysis.scrollIntoView({behavior:"smooth"});
+	}
+
+	document.addEventListener("DOMContentLoaded",(function(){
+		document.getElementById("analysis").addEventListener("click",(function(e){e.preventDefault(),toggle("u1")})),document.getElementById("top_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("top").scrollIntoView({behavior:"smooth"})})),document.getElementById("plans_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("plans").scrollIntoView({behavior:"smooth"})})),document.getElementById("about_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("about").scrollIntoView({behavior:"smooth"})})),document.getElementById("background_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("about").scrollIntoView({behavior:"smooth"})})),document.getElementById("who_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("who").scrollIntoView({behavior:"smooth"})})),document.getElementById("business_nav").addEventListener("click",(function(e){e.preventDefault(),document.getElementById("business").scrollIntoView({behavior:"smooth"})}))}));
+
+	const images=document.querySelectorAll("img"), exceptions=[document.getElementById("logo")];
+
+	images.forEach((e=>{e.addEventListener("click",(function(){exceptions.includes(e)||window.open(e.src,"_blank")}))
+}));
+	</script>
 </body>
 </html>
 
